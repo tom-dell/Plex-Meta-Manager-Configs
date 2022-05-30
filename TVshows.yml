@@ -3,6 +3,16 @@
 ###############################################
 
 collections:
+  Popular Shows on Netflix:
+    sort_title: +1_Popular on Netflix
+    summary:  At Netflix, we want to entertain the world. Whatever your taste, and no matter where you live, we give you access to best-in-class TV series, documentaries, feature films
+    url_poster: https://theposterdb.com/api/assets/168827
+    imdb_list: 
+      url: https://www.imdb.com/search/title/?title_type=tv_series,tv_episode,tv_miniseries,tv_short&companies=co0144901&user_rating=6.0,10.0
+      limit: 20
+    collection_order: custom
+    sync_mode: sync
+
   Saturday Morning Cartoons:
     plex_search:
       any:
