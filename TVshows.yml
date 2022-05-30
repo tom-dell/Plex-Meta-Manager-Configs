@@ -1,0 +1,14 @@
+###############################################
+## collections
+###############################################
+
+collections:
+  Saturday Morning Cartoons:
+    plex_search:
+      any:
+        title:
+          - Dragon Ball Z
+          - Beyblade
+          - Pokemon
+          - Sailor Moon
+          - Zoids
