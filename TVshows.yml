@@ -3,13 +3,42 @@
 ###############################################
 
 collections:
-  Popular Shows on Netflix:
+  Weekly trending Movies:
+    sort_title: +0_Weekly trending TV shows
+    summary: TV shows trending this week
+    url_poster: https://theposterdb.com/api/assets/224349
+    url_background: https://wallpaper.dog/large/20493599.jpg
+    tmdb_trending_weekly: 10
+    collection_order: custom
+    sync_mode: sync
+
+  Popular shows on Netflix:
     sort_title: +1_Popular on Netflix
     summary:  At Netflix, we want to entertain the world. Whatever your taste, and no matter where you live, we give you access to best-in-class TV series, documentaries, feature films
     url_poster: https://theposterdb.com/api/assets/168827
     imdb_list: 
       url: https://www.imdb.com/search/title/?title_type=tv_series,tv_episode,tv_miniseries,tv_short&companies=co0144901&user_rating=6.0,10.0
-      limit: 20
+      limit: 10
+    collection_order: custom
+    sync_mode: sync
+
+  Popular shows on Disney+:
+    sort_title: +2_Popular on Disney+
+    summary: TV shows popular on Disney+ today
+    url_poster: https://theposterdb.com/api/assets/96541
+    imdb_list:
+      url: https://www.imdb.com/search/title/?title_type=tv_series,tv_episode,tv_miniseries,tv_short&companies=co0721120&user_rating=6.0,10.0
+      limit: 10
+    collection_order: custom
+    sync_mode: sync
+
+  Popular shows on Discovery+:
+    sort_title: +3_Popular on Discovery+
+    summary: Discovery+ is the streaming home of Food, Home, Relationships, True Crime, Paranormal and so much more. Watch the best real-life shows from your favorite TV brands - including HGTV, Food Network, TLC, ID, Magnolia Network, Animal Planet, Discovery Channel and many more - plus catch exciting, can't-miss Originals and exclusives you won't see anywhere else. There's something for everyone.
+    url_poster: https://theposterdb.com/api/assets/163452
+    imdb_list:
+      url: https://www.imdb.com/search/title/?title_type=tv_series,tv_episode,tv_miniseries,tv_short&companies=co0834810&user_rating=6.0,10.0
+      limit: 10
     collection_order: custom
     sync_mode: sync
 
