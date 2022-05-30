@@ -34,7 +34,7 @@ collections:
 
   Popular Movies on Discovery+:
     sort_title: +3_Popular on Discovery+
-    summary: Movies popular on Discovery+ today
+    summary: Discovery+ is the streaming home of Food, Home, Relationships, True Crime, Paranormal and so much more. Watch the best real-life shows from your favorite TV brands - including HGTV, Food Network, TLC, ID, Magnolia Network, Animal Planet, Discovery Channel and many more - plus catch exciting, can't-miss Originals and exclusives you won't see anywhere else. There's something for everyone.
     url_poster: https://theposterdb.com/api/assets/163452
     imdb_list:
       url: https://www.imdb.com/search/title/?title_type=feature,tv_movie,documentary,short&companies=co0834810&user_rating=6.0,10.0
