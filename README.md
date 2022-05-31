@@ -126,11 +126,11 @@ Now let's move onto something a bit more useful (you are also free to start clic
       limit: 20
 ````
 
-As you can see, it's very similar to the Universal Classic Monsters, except for three bits.
+As you can see, it's very similar to the Universal Classic Monsters, except for two bits.
 
 > sort_title: +1_Popular on Netflix
 
-The +1_ infront of the sort_title field allows for granular ordering of collections in the collections screen. In my case this will make the Netflix collection the second collection in Plex (I have a +0_ for the first collection).
+The +1_ infront of the sort_title field allows for granular ordering of collections in the Plex collections screen. In my case this will make the Netflix collection the second collection in Plex (I have a +0_ for the first collection).
 
 > limit: 20
 
