@@ -2,7 +2,7 @@
 
 I've noticed there is a lot of confusion around how to write the Movies.yml file, it's a bit complicated to wrap your head around, so I decided to write some documentation on how to build one. This does not cover creating the config.yml file, for this we assume you have a working omdb, and tmdb API keys.
 
-Now I must warn you, this is going to get pretty long, and I'm going to take things **very** slowly, now let's get onto it, there are also a lot of links, I **strongly suggest** not clicking them until you finish reading this entire page, otherwise you might get a bit confused.
+Now I must warn you, this is going to get pretty long, and I'm going to take things **very** slowly, now let's get onto it, there are also a lot of links, I **strongly suggest not clicking** them until you finish reading this entire page, otherwise you might get a bit confused.
 
 Collections are built around a list of movies/shows, these lists can come from Trakt, IMDB, and many other sources, today we will be covering how to make collections using IMDb, Plex's inbuilt search function, and TMDB.
 
