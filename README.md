@@ -45,7 +45,7 @@ First, we're going to create a simple Movies.yml that will create a collection o
   <img src="https://raw.githubusercontent.com/tom-dell/Plex-Meta-Manager-Configs/master/images/universal_monsters.png" />
 </p>
 
-Conviently there is already a [list of these movies on IMDB already!](https://www.imdb.com/list/ls565593601/) (you can click this one too!)
+Conviently there is already a [list of these movies on IMDB already! I wonder who made it?](https://www.imdb.com/list/ls565593601/) (you can click this one too!)
 
 Let's quickly go over what each line in the template means;
 
