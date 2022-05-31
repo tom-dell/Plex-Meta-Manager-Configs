@@ -24,7 +24,7 @@ Let's cover off some terms first;
 
 ## A collection of Universal Classic Monsters movies using the imdb_url builder
 
-Before we start, let's go over the format of one of these collections, we will be using the IMDb builder, and a very simple format and order, which I personally find logically (once you understand how they work, feel free to change it). Many other fields can be added, you can find these in the documentation.
+Before we start, let's go over the format of one of these collections, we will be using the imdb_search builder, and a very simple format and order, which I personally find logically (once you understand how they work, feel free to change it). 
 
 Indentation matters, it's two spaces per indent.
 
