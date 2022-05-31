@@ -173,9 +173,7 @@ What we have done here, is used the Plex search function, to search for the acto
 
 Simply adding this to your movies.yml file will create a collection containing every movie Nic Cage is in, that you have in your library. But what happens if you want some more granularity in this collection?
 
-Let's sort the collection, with the latest movies at the top, but how do we do this? Luckily for us, Plex Meta Manager is very well documented, so let's see what the [documentation says about sorting the the plex_serch builder](https://metamanager.wiki/en/latest/metadata/builders/plex.html#sort-options).
-
-Looks like there is a value that sorts by released year, descending.
+Let's sort the collection, with the latest movies at the top, but how do we do this? Luckily for us, Plex Meta Manager is very well documented, so let's see what the [documentation says about sorting the the plex_serch builder](https://metamanager.wiki/en/latest/metadata/builders/plex.html#sort-options), it looks like there is a filter called sort_order, which takes a value that sorts by released year, descending.
 
 > release.desc
 
