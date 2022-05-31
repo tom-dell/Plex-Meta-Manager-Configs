@@ -10,8 +10,8 @@ Let's cover off some terms first;
 
 * Builder
   * This is what Plex Meta Manager calls the format of the of the collection, as each type of collection (IMDb/Trakt/etc) all have different types of options and filters.
-  * This is a screenshot of two of my collections, the first one is built with the [IMDb builder](https://metamanager.wiki/en/latest/metadata/builders/imdb.html), and the second with the [mdblist builder](https://metamanager.wiki/en/latest/metadata/builders/mdblist.html).
-  * The red and pink are collections, where as the blue is the builder within the collection.
+  * This is a screenshot of two of my collections, the first one is built with the [IMDb builder](https://metamanager.wiki/en/latest/metadata/builders/imdb.html), and the second with the [tmdb builder](https://metamanager.wiki/en/latest/metadata/builders/tmdb.html#tmdb-builders).
+  * The red boxes are collections, where as the blue ones are the builders within the collection.
   * ![](/images/builders.png)
 * Static list
   * This is a list that doesn't change, something like a list of all comedy movies released in 2021, they can't release any more movies in 2021 until we invent time travel!
@@ -22,15 +22,11 @@ Let's cover off some terms first;
 * [TMDB](https://www.themoviedb.org/)
   * The Movie Database, a website that contains a huge amount of information about movies.
 
-
-
-
-
-
+## A collection of Universal Classic Monsters movies using the IMDb builder
 
 Before we start, let's go over the format of one of these collections, we will be using the IMDb builder, and a very simple format and order, which I personally find logically (once you understand how they work, feel free to change it). Many other fields can be added, you can find these in the documentation.
 
-Indentation matters, it's two spaces per level of indent (2, then 4, then 6).
+Indentation matters, it's two spaces per indent.
 
 ```
 collections:
@@ -112,6 +108,8 @@ collections:
     imdb_list: https://www.imdb.com/list/ls565593601/ 
 ````
 
+## A dynamic collection of movies popular on Netflix right now using the IMDb builder
+
 Now let's move onto something a bit more useful (you are also free to start clicking links again), a collection of popular movies on Netflix, hopefully by now you'll be able to read this;
 
 ```  
@@ -135,6 +133,8 @@ The +1_ infront of the sort_title field allows for granular ordering of collecti
 > limit: 20
 
 All this does, is limit the number of movies we will pull from the list.
+
+## A Nicolas Cage collestion using the Plex builder
 
 Let's move onto how to use the builders documentation, let's open the [Plex builder documentation](https://metamanager.wiki/en/latest/metadata/builders/plex.html), and make a collection for all movies in your library that have the glorious Nicolas Cage in them.
 
@@ -197,6 +197,8 @@ Since this is a option in the Plex builder, it needs to be included in the plex_
 ![](/images/plex_search.png)
 
 Again, the red is the collection, the blue is the content of the plex_search builder.
+
+## A complex collection of documentaries using the TMDB builder
 
 There are loads of options you can find in the documentation, we'll do one more, this time we'll build a collection of documentaries released after 2015, with a user score that is greater than, or equalling 6, sort them based on their rating, and limit the collection to 20 movies. We'll be using the [TMDB builder](https://metamanager.wiki/en/latest/metadata/builders/tmdb.html#tmdb-builders), and it's [dicover function](https://metamanager.wiki/en/latest/metadata/builders/tmdb.html#tmdb-discover) to achieve this.
 
