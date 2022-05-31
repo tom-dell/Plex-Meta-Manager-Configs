@@ -4,14 +4,14 @@ I've noticed there is a lot of confusion around how to write the Movies.yml file
 
 Now I must warn you, this is going to get pretty long, and I'm going to take things **very** slowly, now let's get onto it, there are also a lot of links, I **strongly suggest not clicking** them until you finish reading this entire page, otherwise you might get a bit confused.
 
-Collections are built around a list of movies/shows, these lists can come from Trakt, IMDB, and many other sources, today we will be covering how to make collections using IMDb, Plex's inbuilt search function, and TMDB.
+Collections are built around a list of movies/shows, these lists can come from Trakt, IMDB, and many other sources, today we will be covering how to make collections using the imdb_list, plex_search, and tmdb_discover builders (I haven't linked them on purpose, don't look them up yet).
 
 Let's cover off some terms first;
 
 * Builder
-  * This is what Plex Meta Manager calls the format of the of the collection, as each type of collection (IMDb/Trakt/etc) all have different types of options and filters.
-  * This is a screenshot of two of my collections, the first one is built with the [IMDb builder](https://metamanager.wiki/en/latest/metadata/builders/imdb.html), and the second with the [tmdb builder](https://metamanager.wiki/en/latest/metadata/builders/tmdb.html#tmdb-builders).
-  * The red boxes are collections, where as the blue ones are the builders within the collection.
+  * This is the section in your Movies.yml that gets the list from somewhere, whether that be IMDb, Trakt, or somewhere else. 
+  * This is a screenshot of two of my collections, the first one is built with the imdb_list builder, and the second with the tmdb_discover builder.
+  * The red boxes are collections, where as the blue ones are the builders within the collection. **Don't worry, you shouldn't understand what it says yet!**
   * ![](/images/builders.png)
 * Static list
   * This is a list that doesn't change, something like a list of all comedy movies released in 2021, they can't release any more movies in 2021 until we invent time travel!
@@ -22,7 +22,7 @@ Let's cover off some terms first;
 * [TMDB](https://www.themoviedb.org/)
   * The Movie Database, a website that contains a huge amount of information about movies.
 
-## A collection of Universal Classic Monsters movies using the IMDb builder
+## A collection of Universal Classic Monsters movies using the imdb_url builder
 
 Before we start, let's go over the format of one of these collections, we will be using the IMDb builder, and a very simple format and order, which I personally find logically (once you understand how they work, feel free to change it). Many other fields can be added, you can find these in the documentation.
 
@@ -54,7 +54,7 @@ Collections:
 
   Universal Classic Monsters:
 ```
-The first line 
+The first line.
 
 > collections: 
 
@@ -89,10 +89,11 @@ Now for the last section, this section is called the builder.
 
 
 ```
-    imdb_list: https://www.imdb.com/list/ls565593601/ 
+    imdb_list: 
+      url: https://www.imdb.com/list/ls565593601/ 
 ```
 
-Let's use the Universal Classic Monsters IMDb list that is linked above, but I've also linked it [https://www.imdb.com/list/ls565593601/](https://www.imdb.com/list/ls565593601/) so you don't have to scroll back up.
+Let's use the Universal Classic Monsters IMDb list that is linked above, but I've also linked it [https://www.imdb.com/list/ls565593601/](https://www.imdb.com/list/ls565593601/) so you don't have to scroll back up. By reading the documentation you'll find that the imdb_list builder takes the url argument, which we just give the url of our list.
 
 Finally we have a complete Movies.yml file.
 
@@ -105,10 +106,11 @@ collections:
     url_poster: https://theposterdb.com/api/assets/106840
     collection_order: custom
     sync_mode: sync
-    imdb_list: https://www.imdb.com/list/ls565593601/ 
+    imdb_list: 
+      url: https://www.imdb.com/list/ls565593601/ 
 ````
 
-## A dynamic collection of movies popular on Netflix right now using the IMDb builder
+## A dynamic collection of movies popular on Netflix right now using the imdb_url builder (agfain!)
 
 Now let's move onto something a bit more useful (you are also free to start clicking links again), a collection of popular movies on Netflix, hopefully by now you'll be able to read this;
 
@@ -124,7 +126,7 @@ Now let's move onto something a bit more useful (you are also free to start clic
       limit: 20
 ````
 
-As you can see, it's very similar to the Universal Classic Monsters, except for two bits.
+As you can see, it's very similar to the Universal Classic Monsters, except for three bits.
 
 > sort_title: +1_Popular on Netflix
 
@@ -134,11 +136,11 @@ The +1_ infront of the sort_title field allows for granular ordering of collecti
 
 All this does, is limit the number of movies we will pull from the list.
 
-## A Nicolas Cage collestion using the Plex builder
+## A Nicolas Cage collestion using the plex_search builder
 
-Let's move onto how to use the builders documentation, let's open the [Plex builder documentation](https://metamanager.wiki/en/latest/metadata/builders/plex.html), and make a collection for all movies in your library that have the glorious Nicolas Cage in them.
+Let's move onto how to use the builders documentation, let's open the [plex_search builder documentation](https://metamanager.wiki/en/latest/metadata/builders/plex.html#plex-search), and make a collection for all movies in your library that have the glorious Nicolas Cage in them.
 
-First thing first, let's copy our template, without the IMDb builder, add in a custom name, sort_title, summary, and url_poster.
+First thing first, let's copy our template, without the imdb_search, add in a custom name, sort_title, summary, and url_poster. Then add the collection_order, and sync_mode.
 
 ```
   Nicolas Cage:
@@ -149,9 +151,9 @@ First thing first, let's copy our template, without the IMDb builder, add in a c
     sync_mode: sync
 ```
 
-If you scroll through the Plex builder documentation, you'll find no reference to sync_mode, that's because this is completely local, we aren't querying a online list, we're purely doing searches based on metadata Plex already has, so we can remove that. 
+If you scroll through the plex_search documentation, you'll find no reference to sync_mode, that's because this is completely local, we aren't querying a online list, we're purely doing searches based on metadata Plex already has, so we can remove that. 
 
-Let's first use the builder to search for movies with Nic Cage in them;
+Let's first use the plex_search builder to search for movies with Nic Cage in them;
 
 ```
   Nicolas Cage:
@@ -171,13 +173,13 @@ What we have done here, is used the Plex search function, to search for the acto
 
 Simply adding this to your movies.yml file will create a collection containing every movie Nic Cage is in, that you have in your library. But what happens if you want some more granularity in this collection?
 
-Let's sort the collection, with the latest movies at the top, but how do we do this? Luckily for us, Plex Meta Manager is very well documented, so let's see what the [sort_option values are in the documentation](https://metamanager.wiki/en/latest/metadata/builders/plex.html#sort-options).
+Let's sort the collection, with the latest movies at the top, but how do we do this? Luckily for us, Plex Meta Manager is very well documented, so let's see what the [documentation says about sorting the the plex_serch builder](https://metamanager.wiki/en/latest/metadata/builders/plex.html#sort-options).
 
 Looks like there is a value that sorts by released year, descending.
 
 > release.desc
 
-Let's add that in there;
+Let's add that in there (watch your indentation);
 
 ```
   Nicolas Cage:
@@ -192,17 +194,17 @@ Let's add that in there;
     tmdb_person: 2963
 ````
 
-Since this is a option in the Plex builder, it needs to be included in the plex_search indentation block.
+Since this is a option in the plex_search builder, it needs to be included in the plex_search indentation block.
 
 ![](/images/plex_search.png)
 
-Again, the red is the collection, the blue is the content of the plex_search builder.
+Again, the red is the collection, the blue is the content of the plex_search builder. And you're done!
 
-## A complex collection of documentaries using the TMDB builder
+## A complex collection of documentaries using the tmdb_discover builder
 
 There are loads of options you can find in the documentation, we'll do one more, this time we'll build a collection of documentaries released after 2015, with a user score that is greater than, or equalling 6, sort them based on their rating, and limit the collection to 20 movies. We'll be using the [TMDB builder](https://metamanager.wiki/en/latest/metadata/builders/tmdb.html#tmdb-builders), and it's [dicover function](https://metamanager.wiki/en/latest/metadata/builders/tmdb.html#tmdb-discover) to achieve this.
 
-Again, first thing to do, is drop our template in, add the name, the sort_title, summary, and poster.
+Again, first thing to do, is drop our template in, add a custom name, sort_title, summary, and poster, as well as the normal collection_order, and sync_mode.
 
 ```
   Highest rating documentaries in the last 5 years:
@@ -215,9 +217,28 @@ Again, first thing to do, is drop our template in, add the name, the sort_title,
 
 Let's split our conditions up, and tackle them one at a time.
 
+* Date range (released after 2015)
+
+Reading the [tmdb plex meta manager documentation](https://metamanager.wiki/en/latest/metadata/builders/tmdb.html#), we can find the a [builder called tmdb_discover](https://metamanager.wiki/en/latest/metadata/builders/tmdb.html#tmdb-discover) who's summary sounds a lot like searching. The tmdb_discover builder takes a field called release_date.gte;
+
+> release_date.gte
+
+Which translates into 'release date greater than', and takes a date value in the format MM/DD/YYYY, let's whack that into our collection under tmdb_discover, with the date 01/01/2015.
+
+```
+  Highest rating documentaries in the last 5 years:
+    sort_title: Highest rated documentaries in the last 5 years
+    summary: This collection contains some of the highest rated documentaries released in the last 5 years
+    url_poster: https://theposterdb.com/api/123456
+    collection_order: custom
+    sync_mode: sync
+    tmdb_discover:
+      primary_release_date.lte: 01/01/2015
+```
+
 * Genre
 
-Reading the discover documentation, we can find the genre field, let's add that in;
+If you scrolled a bit further down in the [builder called tmdb_discover](https://metamanager.wiki/en/latest/metadata/builders/tmdb.html#tmdb-discover) you would have also takes a genre field called with_genre, let's put that in there.
 
 > with_genres: 
 
@@ -229,6 +250,7 @@ Reading the discover documentation, we can find the genre field, let's add that 
     collection_order: custom
     sync_mode: sync
     tmdb_discover:
+      primary_release_date.lte: 01/01/2015
       with_genres: 
 ```
 
@@ -248,27 +270,8 @@ Let's add it in;
     collection_order: custom
     sync_mode: sync
     tmdb_discover:
-      with_genres: 99
-```
-
-* Date range (released after 2015)
-
-We can find a field called;
-
-> release_date.gte
-
-Which translates into 'release date greater than', and takes a date value in the format MM/DD/YYYY, let's whack that into our collection (remember to put it in the tmdb builder indentation block).
-
-```
-  Highest rating documentaries in the last 5 years:
-    sort_title: Highest rated documentaries in the last 5 years
-    summary: This collection contains some of the highest rated documentaries released in the last 5 years
-    url_poster: https://theposterdb.com/api/123456
-    collection_order: custom
-    sync_mode: sync
-    tmdb_discover:
-      with_genres: 99
       primary_release_date.lte: 01/01/2015
+      with_genres: 99
 ```
 
 * User rating ≥ 6
@@ -287,8 +290,8 @@ Let's put it in there;
     collection_order: custom
     sync_mode: sync
     tmdb_discover:
-      with_genres: 99
       primary_release_date.lte: 01/01/2015
+      with_genres: 99
       vote_count.gte: 6
 ```
 
@@ -308,8 +311,9 @@ There are **loads** of options you can choose from, they are all listed in [the 
     collection_order: custom
     sync_mode: sync
     tmdb_discover:
-      with_genres: 99
       primary_release_date.lte: 01/01/2015
+      with_genres: 99
+      vote_count.gte: 6
       sort_by: vote_average.desc
 ```
 
@@ -329,10 +333,11 @@ The default value is 100, which is way to high, let's limit it to 20.
     collection_order: custom
     sync_mode: sync
     tmdb_discover:
+      primary_release_date.lte: 01/01/2015
       with_genres: 99
       primary_release_date.lte: 01/01/2015
       sort_by: vote_average.desc
       limit:20
 ```
 
-That's all there is to it, I really hope this helped.
+That's all there is to it, I really hope this helped, have a browse through the [Plex Meta Manager Wiki](https://metamanager.wiki/en/latest/index.html), and see what other collections you come up with!
