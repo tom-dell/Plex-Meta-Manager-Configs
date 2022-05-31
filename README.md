@@ -110,7 +110,7 @@ collections:
       url: https://www.imdb.com/list/ls565593601/ 
 ````
 
-## A dynamic collection of movies popular on Netflix right now using the imdb_url builder (agfain!)
+## A dynamic collection of movies popular on Netflix right now using the imdb_url builder (again!)
 
 Now let's move onto something a bit more useful (you are also free to start clicking links again), a collection of popular movies on Netflix, hopefully by now you'll be able to read this;
 
