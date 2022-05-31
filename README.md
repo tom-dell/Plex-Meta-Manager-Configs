@@ -26,7 +26,7 @@ Let's cover off some terms first;
 
 Before we start, let's go over the format of one of these collections, we will be using the IMDb builder, and a very simple format and order, which I personally find logically (once you understand how they work, feel free to change it). Many other fields can be added, you can find these in the documentation.
 
-Indentation matters, it's two spaces per indent.
+Indentation matters, it's two spaces per level of indent (2, then 4, then 6).
 
 ```
 collections:
