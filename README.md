@@ -92,7 +92,7 @@ Now for the last section, this section is called the builder.
     imdb_list: https://www.imdb.com/list/ls565593601/ 
 ```
 
-Use the list above in the builder.
+Let's use the Universal Classic Monsters IMDb list that is linked above, but I've also linked it [https://www.imdb.com/list/ls565593601/](https://www.imdb.com/list/ls565593601/) so you don't have to scroll back up.
 
 Finally we have a complete Movies.yml file.
 
