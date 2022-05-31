@@ -200,7 +200,7 @@ Again, the red is the collection, the blue is the content of the plex_search bui
 
 ## A complex collection of documentaries using the tmdb_discover builder
 
-There are loads of options you can find in the documentation, we'll do one more, this time we'll build a collection of documentaries released after 2015, with a user score that is greater than, or equalling 6, sort them based on their rating, and limit the collection to 20 movies. We'll be using the [TMDB builder](https://metamanager.wiki/en/latest/metadata/builders/tmdb.html#tmdb-builders), and it's [dicover function](https://metamanager.wiki/en/latest/metadata/builders/tmdb.html#tmdb-discover) to achieve this.
+There are loads of builders you can find in the documentation, but we'll do one more together for safety. This time we'll build a collection of documentaries released after 2015, with a user score that is greater than, or equalling 6, sort them based on their rating, and limit the collection to 20 movies. It sounds like a lot, but I promise it's not that hard. We'll be using the [tmdb_discover](https://metamanager.wiki/en/latest/metadata/builders/tmdb.html#tmdb-discover) builder to achieve this.
 
 Again, first thing to do, is drop our template in, add a custom name, sort_title, summary, and poster, as well as the normal collection_order, and sync_mode.
 
@@ -217,11 +217,11 @@ Let's split our conditions up, and tackle them one at a time.
 
 * Date range (released after 2015)
 
-Reading the [tmdb plex meta manager documentation](https://metamanager.wiki/en/latest/metadata/builders/tmdb.html#), we can find the a [builder called tmdb_discover](https://metamanager.wiki/en/latest/metadata/builders/tmdb.html#tmdb-discover) who's summary sounds a lot like searching. The tmdb_discover builder takes a field called release_date.gte;
+The tmdb_discover builder takes a field called release_date.gte;
 
 > release_date.gte
 
-Which translates into 'release date greater than', and takes a date value in the format MM/DD/YYYY, let's whack that into our collection under tmdb_discover, with the date 01/01/2015.
+Which translates into 'release date greater than', and takes a date value in the format MM/DD/YYYY, let's whack that into the tmdb_discover builder within our collection, with the date 01/01/2015.
 
 ```
   Highest rating documentaries in the last 5 years:
@@ -236,7 +236,7 @@ Which translates into 'release date greater than', and takes a date value in the
 
 * Genre
 
-If you scrolled a bit further down in the [builder called tmdb_discover](https://metamanager.wiki/en/latest/metadata/builders/tmdb.html#tmdb-discover) you would have also takes a genre field called with_genre, let's put that in there.
+If you scrolled a bit further down in the [tmdb_discover](https://metamanager.wiki/en/latest/metadata/builders/tmdb.html#tmdb-discover) builder you would have also takes a genre field called with_genre, let's put that in there.
 
 > with_genres: 
 
@@ -295,11 +295,11 @@ Let's put it in there;
 
 * Sort by user rating
 
-The last thing we need to do is sort the movies in the collection by their user rating, checking the documentation brings up this field we can include;
+Now lets sort the collection by their user rating, checking the documentation brings up this field we can include;
 
 > sort_by
 
-There are **loads** of options you can choose from, they are all listed in [the documentation here](https://metamanager.wiki/en/latest/metadata/builders/tmdb.html#sort-options), we are just going to use the value vote_average.desc. So whack that in there, and you'll have this;
+There are **loads** of sorting options you can choose from, they are all listed in [the documentation here](https://metamanager.wiki/en/latest/metadata/builders/tmdb.html#sort-options), we are just going to use the value vote_average.desc. So whack that in there, and you'll have this;
 
 ```
   Highest rating documentaries in the last 5 years:
@@ -317,7 +317,7 @@ There are **loads** of options you can choose from, they are all listed in [the 
 
 * limit
 
-Let's put the limit option in there;
+Finally, lets limit the amount of movies we pull from the list;
 
 > limit
 
