@@ -8,55 +8,55 @@ collections:
     summary: Movies trending this week
     url_poster: https://theposterdb.com/api/assets/224349
     url_background: https://wallpaper.dog/large/20493599.jpg
-    tmdb_trending_weekly: 30
     collection_order: custom
     sync_mode: sync
+    tmdb_trending_weekly: 30
 
   Popular Movies on Netflix:
     sort_title: +1_Popular on Netflix
     summary: Movies popular on Netflix today
     url_poster: https://theposterdb.com/api/assets/168827
+    collection_order: custom
+    sync_mode: sync
     imdb_list: 
       url: https://www.imdb.com/search/title/?title_type=feature,tv_movie,documentary,short&companies=co0144901&user_rating=6.0,10.0
       limit: 20
-    collection_order: custom
-    sync_mode: sync
 
   Popular Movies on Disney+:
     sort_title: +2_Popular on Disney+
     summary: Movies popular on Disney+ today
     url_poster: https://theposterdb.com/api/assets/96541
+    collection_order: custom
+    sync_mode: sync
     imdb_list:
       url: https://www.imdb.com/search/title/?title_type=feature,tv_movie,documentary,short&companies=co0721120&user_rating=6.0,10.0
       limit: 20
-    collection_order: custom
-    sync_mode: sync
 
   Popular Movies on Discovery+:
     sort_title: +3_Popular on Discovery+
     summary: Discovery+ is the streaming home of Food, Home, Relationships, True Crime, Paranormal and so much more. Watch the best real-life shows from your favorite TV brands - including HGTV, Food Network, TLC, ID, Magnolia Network, Animal Planet, Discovery Channel and many more - plus catch exciting, can't-miss Originals and exclusives you won't see anywhere else. There's something for everyone.
     url_poster: https://theposterdb.com/api/assets/163452
+    collection_order: custom
+    sync_mode: sync
     imdb_list:
       url: https://www.imdb.com/search/title/?title_type=feature,tv_movie,documentary,short&companies=co0834810&user_rating=6.0,10.0
       limit: 20
-    collection_order: custom
-    sync_mode: sync
 
   Universal Classic Monsters:
     sort_title: Universal Classic Monsters 
     summary: The Universal Classic Monsters collection showcases all of the original films featuring the most iconic monsters in motion picture history including Dracula, Frankenstein, The Mummy, The Invisible Man, The Bride of Frankenstein, The Wolf Man, Phantom of the Opera and Creature from the Black Lagoon. Starring some of the most legendary actors including Bela Lugosi, Boris Karloff, Lon Chaney Jr., Claude Rains and Elsa Lanchester in the roles that they made famous, these films set the standard for a new horror genre with revolutionary makeup, mood-altering cinematography and groundbreaking special effects.
     url_poster: https://theposterdb.com/api/assets/106840
-    imdb_list: https://www.imdb.com/list/ls565593601/ 
     collection_order: custom
     sync_mode: sync
+    imdb_list: https://www.imdb.com/list/ls565593601/ 
 
   Classic Horror:
     sort_title: Classic Horror 
     summary: A collection of classic horror movies
     url_poster: https://theposterdb.com/api/assets/204647
-    mdblist_list: https://mdblist.com/lists/awestom/classic-horror
     collection_order: custom
     sync_mode: sync
+    mdblist_list: https://mdblist.com/lists/awestom/classic-horror
 
   Nicholas Cage:
     sort_title: Nicholas Cage
