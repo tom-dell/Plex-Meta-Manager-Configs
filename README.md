@@ -83,7 +83,7 @@ This section defines the order of the movies within the collection, as well as t
 
 For the collection_order, we generally use 'custom', as it will order the movies in the same order as the list, or by the conditions in the builder indentation block (we'll cover this soon).
 
-The sync_mode is how the movies are added to the list, are they appended to the collection? Or sync'd with the list? If they are appended, Plex Meta Manager will never remove a movie from the collection, however if it's a sync'd list, if the original list changes, then Plex Meta Manager will change the collection to adjust (adding, or removing movies when the original list adds or removes movies).
+The sync_mode is how the movies are added to the list, if they appended to the collection or sync'd with the list. If they are appended, Plex Meta Manager will never remove a movie from the collection, however if it's a sync'd list, if the original list changes, then Plex Meta Manager will change the collection to adjust (adding, or removing movies when the original list adds or removes movies).
 
 Now for the last section, this section is called the builder.
 
