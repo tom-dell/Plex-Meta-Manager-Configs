@@ -4,10 +4,9 @@
 
 collections:
   Weekly trending Movies:
-    sort_title: +0_Weekly trending TV shows
-    summary: TV shows trending this week
-    url_poster: https://theposterdb.com/api/assets/224349
-    url_background: https://wallpaper.dog/large/20493599.jpg
+    sort_title: +0_TV shows trending this week
+    summary: A collection of TV shows that are trending this week
+    url_poster: https://theposterdb.com/api/assets/231652
     collection_order: custom
     sync_mode: sync
     tmdb_trending_weekly: 10
@@ -15,7 +14,7 @@ collections:
 
   Popular shows on Netflix:
     sort_title: +1_Popular on Netflix
-    summary:  At Netflix, we want to entertain the world. Whatever your taste, and no matter where you live, we give you access to best-in-class TV series, documentaries, feature films
+    summary:  At Netflix, we want to entertain the world. Whatever your taste, and no matter where you live, we give you access to best-in-class TV series, documentaries, and feature films.
     url_poster: https://theposterdb.com/api/assets/168827
     collection_order: custom
     sync_mode: sync
