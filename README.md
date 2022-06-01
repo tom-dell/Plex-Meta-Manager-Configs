@@ -31,7 +31,7 @@ Before we start, let's go over the format of one of these collections, we will b
 
 Indentation matters, it's two spaces per indent.
 
-```
+```YAML
 collections:
 
   :
@@ -52,7 +52,7 @@ Conviently there is already a [list of these movies on IMDb already! I wonder wh
 
 Let's quickly go over what each line in the template means;
 
-```
+```YAML
 collections:
 
   Universal Classic Monsters:
@@ -69,7 +69,7 @@ The second line is the collection name, this has to be before the colon, watch y
 
 This next section is pretty self explanatory, enter a title for the collection, a summary, as well as a poster.
 
-```
+```YAML
     sort_title: Universal Classic Monsters
     summary: This is a collection of movies that contain any of the monsters in the Universal Classic Monsters collection.
     url_poster: https://theposterdb.com/api/assets/106840
@@ -79,7 +79,7 @@ To find a poster for the collection, check out [The PosterDB](https://theposterd
 
 Let's move on;
 
-``` 
+```YAML
     collection_order: custom
     sync_mode: sync
 ```
@@ -93,7 +93,7 @@ The sync_mode is how the movies are added to the list, if they are appended to t
 Now for the last section, this section is called the builder.
 
 
-```
+```YAML
     imdb_list: 
       url: https://www.imdb.com/list/ls565593601/ 
 ```
@@ -102,7 +102,7 @@ Let's use the Universal Classic Monsters IMDb list that is linked above, but I'v
 
 Finally we have a complete Movies.yml file.
 
-```
+```YAML
 collections:
 
   Universal Classic Monsters:
@@ -119,7 +119,7 @@ collections:
 
 Now let's move onto something a bit more useful (you are also free to start clicking links again), a collection of popular movies on Netflix, hopefully by now you'll be able to read this;
 
-```  
+```YAML  
   Popular Movies on Netflix:
     sort_title: +1_Popular on Netflix
     summary: Movies popular on Netflix today
@@ -147,7 +147,7 @@ Let's move onto how to use the builders documentation, let's open the [plex_sear
 
 First thing first, let's copy our template, without the imdb_search, add in a custom name, sort_title, summary, and url_poster. Then add the collection_order, and sync_mode.
 
-```
+```YAML
   Nicolas Cage:
     sort_title: Nicolas Cage
     summary: A collection on movies with Nicolas Cage
@@ -160,7 +160,7 @@ If you scroll through the plex_search documentation, you'll find no reference to
 
 Let's first use the plex_search builder to search for movies with Nic Cage in them;
 
-```
+```YAML
   Nicolas Cage:
     sort_title: Nicolas Cage
     summary: A collection of movies staring Nicolas Cage
@@ -181,7 +181,7 @@ Let's sort the collection, with the latest movies at the top, but how do we do t
 
 Let's add that in there (watch your indentation);
 
-```
+```YAML
   Nicolas Cage:
     sort_title: Nicolas Cage
     summary: A collection of movies staring Nicolas Cage
@@ -205,7 +205,7 @@ There are loads of builders you can find in the documentation, but we'll do one 
 
 Again, first thing to do, is drop our template in, add a custom name, sort_title, summary, and poster, as well as the normal collection_order, and sync_mode.
 
-```
+```YAML
   Highest rating documentaries in the last 5 years:
     sort_title: Highest rated documentaries in the last 5 years
     summary: This collection contains some of the highest rated documentaries released in the last 5 years
@@ -224,7 +224,7 @@ The tmdb_discover builder takes a field called release_date.gte;
 
 Which translates into 'release date greater than', and takes a date value in the format MM/DD/YYYY, let's whack that into the tmdb_discover builder within our collection, with the date 01/01/2015.
 
-```
+```YAML
   Highest rating documentaries in the last 5 years:
     sort_title: Highest rated documentaries in the last 5 years
     summary: This collection contains some of the highest rated documentaries released in the last 5 years
@@ -241,7 +241,7 @@ If you scrolled a bit further down in the [tmdb_discover](https://metamanager.wi
 
 > with_genres: 
 
-```
+```YAML
   Highest rating documentaries in the last 5 years:
     sort_title: Highest rated documentaries in the last 5 years
     summary: This collection contains some of the highest rated documentaries released in the last 5 years
@@ -261,7 +261,7 @@ Search the TMDB for documentary, and grab it from the URL.
 
 Let's add it in;
 
-```
+```YAML
   Highest rating documentaries in the last 5 years:
     sort_title: Highest rated documentaries in the last 5 years
     summary: This collection contains some of the highest rated documentaries released in the last 5 years
@@ -281,7 +281,7 @@ We can find this option;
 
 This translates into 'vote count, greater than'. Let's put it in there too;
 
-```
+```YAML
   Highest rating documentaries in the last 5 years:
     sort_title: Highest rated documentaries in the last 5 years
     summary: This collection contains some of the highest rated documentaries released in the last 5 years
@@ -302,7 +302,7 @@ Now lets sort the collection by their user rating, checking the documentation br
 
 There are **loads** of sorting options you can choose from, they are all listed in [the documentation here](https://metamanager.wiki/en/latest/metadata/builders/tmdb.html#sort-options), we are just going to use the value vote_average.desc, which translates into 'vote average, descending'. So whack that in there, and you'll have this;
 
-```
+```YAML
   Highest rating documentaries in the last 5 years:
     sort_title: Highest rated documentaries in the last 5 years
     summary: This collection contains some of the highest rated documentaries released in the last 5 years
@@ -324,7 +324,7 @@ Finally, lets limit the amount of movies we pull from the list;
 
 The default value is 100, which is way to high, let's limit it to 20.
 
-```
+```YAML
   Highest rating documentaries in the last 5 years:
     sort_title: Highest rated documentaries in the last 5 years
     summary: This collection contains some of the highest rated documentaries released in the last 5 years
