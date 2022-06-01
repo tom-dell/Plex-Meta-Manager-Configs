@@ -3,7 +3,7 @@
 ###############################################
 
 collections:
-  Weekly trending Movies:
+  TV shows trending this week:
     sort_title: +0_TV shows trending this week
     summary: A collection of TV shows that are trending this week
     url_poster: https://theposterdb.com/api/assets/231652
