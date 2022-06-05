@@ -1,5 +1,5 @@
 
-# How to write Plex-Meta-Manager configs
+# How to write Plex-Meta-Manager metadata files
 
 I've noticed there is a lot of confusion around how to write the Metadata files (Movies.yml and TVShows.yml) file, it's a bit complicated to wrap your head around, so I decided to write some documentation on how to build one. This does not cover creating the config.yml file, for this we assume you have a working omdb, and tmdb API keys.
 
