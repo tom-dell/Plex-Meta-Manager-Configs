@@ -7,14 +7,17 @@ collections:
     sort_title: +0_Movies trending this week
     summary: A collection of movies that are trending this week
     url_poster: https://theposterdb.com/api/assets/231651
+    radarr_tag: pmm, movies_trending_week
     collection_order: custom
     sync_mode: sync
     tmdb_trending_weekly: 30
+
 
   Popular Movies on Netflix:
     sort_title: +1_Popular on Netflix
     summary: At Netflix, we want to entertain the world. Whatever your taste, and no matter where you live, we give you access to best-in-class TV series, documentaries, and feature films.
     url_poster: https://theposterdb.com/api/assets/168827
+    item_radarr_tag: pmm, popular_movies_netflix
     collection_order: custom
     sync_mode: sync
     imdb_list: 
