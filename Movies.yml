@@ -7,7 +7,7 @@ collections:
     sort_title: +0_Movies trending this week
     summary: A collection of movies that are trending this week
     url_poster: https://theposterdb.com/api/assets/231651
-    item_radarr_tag: trending_tmdb
+    item_radarr_tag: pmm, trending_tmdb
     collection_order: custom
     sync_mode: sync
     tmdb_trending_weekly: 30
@@ -17,7 +17,7 @@ collections:
     sort_title: +1_Popular on Netflix
     summary: At Netflix, we want to entertain the world. Whatever your taste, and no matter where you live, we give you access to best-in-class TV series, documentaries, and feature films.
     url_poster: https://theposterdb.com/api/assets/168827
-    item_radarr_tag: popular_netflix
+    item_radarr_tag: pmm, popular_netflix
     collection_order: custom
     sync_mode: sync
     imdb_list: 
@@ -28,7 +28,7 @@ collections:
     sort_title: +2_Popular on Disney+
     summary: Movies popular on Disney+ today
     url_poster: https://theposterdb.com/api/assets/96541
-    item_radarr_tag: popular_disney+
+    item_radarr_tag: pmm, popular_disney+
     collection_order: custom
     sync_mode: sync
     imdb_list:
@@ -39,7 +39,7 @@ collections:
     sort_title: +3_Popular on Discovery+
     summary: Discovery+ is the streaming home of Food, Home, Relationships, True Crime, Paranormal and so much more. Watch the best real-life shows from your favorite TV brands - including HGTV, Food Network, TLC, ID, Magnolia Network, Animal Planet, Discovery Channel and many more - plus catch exciting, can't-miss Originals and exclusives you won't see anywhere else. There's something for everyone.
     url_poster: https://theposterdb.com/api/assets/163452
-    item_radarr_tag: popular_discovery+
+    item_radarr_tag: pmm, popular_discovery+
     collection_order: custom
     sync_mode: sync
     imdb_list:
@@ -50,6 +50,7 @@ collections:
     sort_title: Universal Classic Monsters 
     summary: The Universal Classic Monsters collection showcases all of the original films featuring the most iconic monsters in motion picture history including Dracula, Frankenstein, The Mummy, The Invisible Man, The Bride of Frankenstein, The Wolf Man, Phantom of the Opera and Creature from the Black Lagoon. Starring some of the most legendary actors including Bela Lugosi, Boris Karloff, Lon Chaney Jr., Claude Rains and Elsa Lanchester in the roles that they made famous, these films set the standard for a new horror genre with revolutionary makeup, mood-altering cinematography and groundbreaking special effects.
     url_poster: https://theposterdb.com/api/assets/106840
+    item_radarr_tag: pmm, universal_classic_monsters
     collection_order: custom
     sync_mode: sync
     imdb_list: https://www.imdb.com/list/ls565593601/ 
@@ -58,6 +59,7 @@ collections:
     sort_title: Classic Horror 
     summary: A collection of classic horror movies
     url_poster: https://theposterdb.com/api/assets/204647
+    item_radarr_tag: pmm, classic_horror
     collection_order: custom
     sync_mode: sync
     mdblist_list: https://mdblist.com/lists/awestom/classic-horror
