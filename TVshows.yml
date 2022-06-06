@@ -7,6 +7,7 @@ collections:
     sort_title: +0_TV shows trending this week
     summary: A collection of TV shows that are trending this week
     url_poster: https://theposterdb.com/api/assets/231652
+    item_sonarr_tag: trending_tmdb
     collection_order: custom
     sync_mode: sync
     tmdb_trending_weekly: 10
@@ -16,6 +17,7 @@ collections:
     sort_title: +1_Popular on Netflix
     summary:  At Netflix, we want to entertain the world. Whatever your taste, and no matter where you live, we give you access to best-in-class TV series, documentaries, and feature films.
     url_poster: https://theposterdb.com/api/assets/168827
+    item_sonarr_tag: popular_netflix
     collection_order: custom
     sync_mode: sync
     imdb_list: 
@@ -26,6 +28,7 @@ collections:
     sort_title: +2_Popular on Disney+
     summary: TV shows popular on Disney+ today
     url_poster: https://theposterdb.com/api/assets/96541
+    item_sonarr_tag: popular_disney+
     collection_order: custom
     sync_mode: sync
     imdb_list:
@@ -36,18 +39,9 @@ collections:
     sort_title: +3_Popular on Discovery+
     summary: Discovery+ is the streaming home of Food, Home, Relationships, True Crime, Paranormal and so much more. Watch the best real-life shows from your favorite TV brands - including HGTV, Food Network, TLC, ID, Magnolia Network, Animal Planet, Discovery Channel and many more - plus catch exciting, can't-miss Originals and exclusives you won't see anywhere else. There's something for everyone.
     url_poster: https://theposterdb.com/api/assets/163452
+    item_sonarr_tag: popular_discovery+
     collection_order: custom
     sync_mode: sync
     imdb_list:
       url: https://www.imdb.com/search/title/?title_type=tv_series,tv_episode,tv_miniseries,tv_short&companies=co0834810&user_rating=6.0,10.0
       limit: 10
-
-  Saturday Morning Cartoons:
-    plex_search:
-      any:
-        title:
-          - Dragon Ball Z
-          - Beyblade
-          - Pokemon
-          - Sailor Moon
-          - Zoids
